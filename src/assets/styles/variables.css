@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;800&family=Poppins:wght@500;600;700&display=swap");
+
+:root {
+  /* --------------------- COLOR --------------------- */
+
+  --clr-primary: #647fbc;
+  --clr-secondary: #91adc8;
+  --clr-white: #fff;
+
+  /* BORDER */
+  --bdr-color: #ccc;
+
+  /* BACKGROUND */
+  --bg-white: #fff;
+  --bg-gray: #f8fafc;
+
+  /* --------------------- FONT --------------------- */
+  --font-base: "Nunito", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* --------------------- OTHER --------------------- */
+
+  /* RADIUS */
+  --rds-default: 5px;
+
+  /* SHADOW */
+  --sdw-default: 0 0.1px 4px rgba(0, 0, 0, 0.2);
+}
