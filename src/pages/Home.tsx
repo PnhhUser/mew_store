@@ -4,8 +4,15 @@ import HeaderLayout from "../layouts/HeaderLayout";
 import "./styles/home.css";
 import cat_walk from "../assets/images/cat_walk.webp";
 import SlideBanner from "../components/slide-banner/slide-banner";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
+
+  const onGoPage = (): void => {
+    navigate("/shopping");
+  };
+
   return (
     <div id="container-home">
       <CardBoard header={<HeaderLayout />}>
@@ -42,7 +49,10 @@ function HomePage() {
               </div>
 
               <div className="content__actions">
-                <div className="content__btn content__btn--primary">
+                <div
+                  className="content__btn content__btn--primary"
+                  onClick={onGoPage}
+                >
                   <p>Jump to shop</p>
                 </div>
               </div>

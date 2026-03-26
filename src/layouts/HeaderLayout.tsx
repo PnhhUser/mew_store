@@ -1,6 +1,6 @@
 import "./styles/header-layout.css";
 import logo from "../assets/images/lg.png";
-import Menu from "../components/menu/Menu";
+import Nav from "../components/nav/nav";
 
 function HeaderLayout() {
   return (
@@ -12,7 +12,7 @@ function HeaderLayout() {
         </div>
       </div>
       <div className="header-wrapper__right">
-        <Menu />
+        <Nav />
       </div>
     </div>
   );

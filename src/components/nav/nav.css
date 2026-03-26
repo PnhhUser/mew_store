@@ -1,0 +1,73 @@
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hamburger menu box */
+.nav__bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav__box {
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav__icon {
+  color: #fff;
+}
+
+/* Menu link chung */
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-family: var(--font-heading);
+  padding: 16px;
+  display: block;
+}
+
+/* Mobile menu trong drawer */
+.nav__list--mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav__list--mobile .nav__link {
+  border-bottom: 1px solid;
+}
+
+/* Desktop menu */
+.nav__list--desktop {
+  display: none;
+  flex-direction: row;
+}
+
+/* Laptop trở lên */
+@media (min-width: 1024px) {
+  .nav {
+    justify-content: center;
+  }
+  .nav__bar {
+    display: none;
+  }
+
+  .nav__list--desktop {
+    display: flex;
+  }
+
+  .nav__link {
+    text-align: center;
+    width: 120px;
+  }
+}
