@@ -4,8 +4,9 @@
   /* --------------------- COLOR --------------------- */
 
   --clr-primary: #647fbc;
-  --clr-secondary: #91adc8;
-  --clr-white: #fff;
+  --clr-secondary: #e6e7eb;
+  --clr-white: #fefefe;
+  --clr-black: #201e1f;
 
   /* BORDER */
   --bdr-color: #ccc;

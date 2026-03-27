@@ -69,7 +69,6 @@ async function handleClick(
   element: HTMLElement,
   close: () => void,
 ) {
-  // 1️⃣ trigger animation trượt + mờ
   element.animate(
     [
       { transform: "translateX(0px)", opacity: 1 },
@@ -78,16 +77,12 @@ async function handleClick(
     { duration: 600, easing: "ease-in-out" },
   );
 
-  // 2️⃣ đợi link animation xong
   await sleep(600);
 
-  // 3️⃣ đóng drawer (drawer animation 0.3s)
   close();
 
-  // 4️⃣ đợi drawer đóng xong
   await sleep(300);
 
-  // 5️⃣ chuyển page
   window.location.href = `/${item}`;
 }
 

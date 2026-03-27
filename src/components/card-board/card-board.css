@@ -5,16 +5,16 @@
   box-shadow: var(--sdw-default);
 
   width: 100%;
-  max-width: 400px; /* mobile */
+  max-width: 400px;
 
-  aspect-ratio: 9 / 19.5;
+  /* aspect-ratio: 9 / 19.5; */
   padding: 16px;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
   #card-board {
-    aspect-ratio: 3 / 4;
+    /* aspect-ratio: 3 / 4; */
     width: 80%;
     max-width: 600px;
   }
@@ -23,7 +23,7 @@
 /* Laptop */
 @media (min-width: 1024px) {
   #card-board {
-    aspect-ratio: 16 / 10;
+    /* aspect-ratio: 16 / 10; */
     width: 100%;
     max-width: 1024px;
   }
@@ -32,7 +32,7 @@
 /* Desktop lớn */
 @media (min-width: 1440px) {
   #card-board {
-    aspect-ratio: 16 / 9;
+    /* aspect-ratio: 16 / 9; */
     width: 100%;
     max-width: 1200px;
   }
