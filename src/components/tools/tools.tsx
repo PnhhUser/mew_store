@@ -3,23 +3,57 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { LuFilter } from "react-icons/lu";
 import { GoSearch } from "react-icons/go";
-import { LuScanBarcode } from "react-icons/lu";
 import { LuShoppingBag } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 import { HiOutlineViewGrid } from "react-icons/hi";
 import { BiHome } from "react-icons/bi";
 
 import "./tools.css";
+import { useDrawerStore } from "../../stores/drawer-store";
+import FilterProduct from "../filter-products/filter-product";
+import { useNavigate } from "react-router-dom";
+import { useModalStore } from "../../stores/modal-store";
+import SearchProducts from "../search-products/search-products";
+import { MdOutlineContactSupport } from "react-icons/md";
+
+interface ITools {
+  name: string;
+  icon: React.ReactNode;
+  event?: () => void;
+}
 
 function Tools() {
   const [isOpen, setIsOpen] = useState(false);
+  const openDrawer = useDrawerStore((s) => s.open);
+  const openModal = useModalStore((s) => s.open);
+  const navigate = useNavigate();
 
-  const tools = [
-    { icon: <LuFilter />, name: "Filter" },
-    { icon: <GoSearch />, name: "Search" },
-    { icon: <LuScanBarcode />, name: "Barcode" },
-    { icon: <LuShoppingBag />, name: "Shopping" },
-    { icon: <BiHome />, name: "Home" },
+  const tools: ITools[] = [
+    {
+      icon: <LuFilter />,
+      name: "Filter",
+      event: () => openDrawer("", <FilterProduct />),
+    },
+    {
+      icon: <GoSearch />,
+      name: "Search",
+      event: () => openModal({ title: "", children: <SearchProducts /> }),
+    },
+    {
+      icon: <BiHome />,
+      name: "Home",
+      event: () => navigate("/"),
+    },
+    {
+      icon: <LuShoppingBag />,
+      name: "Shopping",
+      event: () => navigate("/shopping/cart"),
+    },
+    {
+      icon: <MdOutlineContactSupport />,
+      name: "Support",
+      event: () => navigate("/support"),
+    },
   ];
 
   const radius = 80;
@@ -70,7 +104,10 @@ function Tools() {
                   delay: index * 0.05,
                 }}
               >
-                <motion.button className="circular-menu__item-btn">
+                <motion.button
+                  className="circular-menu__item-btn"
+                  onClick={tool.event}
+                >
                   {tool.icon}
                 </motion.button>
 

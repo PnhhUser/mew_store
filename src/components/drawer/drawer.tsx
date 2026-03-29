@@ -34,7 +34,7 @@ function Drawer() {
             <div className="drawer__header">
               <h3 className="drawer__title">{title}</h3>
               <div className="drawer__icon" onClick={close}>
-                <IoClose size={18} />
+                <IoClose size={22} />
               </div>
             </div>
             <div className="drawer__content">{children}</div>

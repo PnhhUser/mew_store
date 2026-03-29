@@ -1,3 +1,4 @@
+import CardProduct from "../components/card-product/card-product";
 import FilterProduct from "../components/filter-products/filter-product";
 import SearchProducts from "../components/search-products/search-products";
 import Tools from "../components/tools/tools";
@@ -11,7 +12,9 @@ function Shop() {
         <SearchProducts />
         <FilterProduct />
       </div>
-      <div className="frame-right">content</div>
+      <div className="frame-right">
+        <CardProduct />
+      </div>
       <Tools />
     </div>
   );

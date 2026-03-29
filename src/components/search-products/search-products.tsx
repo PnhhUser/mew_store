@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiSearch, FiX } from "react-icons/fi";
+
 import "./search-products.css";
 
 function SearchProducts() {
