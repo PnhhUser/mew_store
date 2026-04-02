@@ -10,7 +10,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   const onGoPage = (): void => {
-    navigate("/shopping");
+    navigate("/");
   };
 
   return (
